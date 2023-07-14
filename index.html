@@ -102,7 +102,11 @@
             CheckWeather(searchBox.value);
         });
 
-
+        searchBox.addEventListener("keydown", () => {
+            if(event.keyCode == 13){
+                CheckWeather(searchBox.value);
+            }
+        })
 
     </script>
 </body>
