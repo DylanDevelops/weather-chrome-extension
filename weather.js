@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 weatherIcon.src = "./src/images/rain.png";
                 break;
             case "Thunderstorm":
-                weatherIcon.src = "./src/images/rain.png";
+                weatherIcon.src = "./src/images/thunderstorm.png";
                 break;
             case "Drizzle":
                 weatherIcon.src = "./src/images/drizzle.png";

@@ -2,7 +2,8 @@
     "manifest_version": 3,
     "name": "What's the Weather?",
     "description": "Check the weather on the fly from a chrome extension!",
-    "version": "1.2",
+    "author": "Dylan Ravel",
+    "version": "1.3",
     "icons": {
         "16": "./android-chrome-192x192.png",
         "32": "./android-chrome-192x192.png",
