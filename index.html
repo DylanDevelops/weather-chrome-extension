@@ -1,113 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <title>What's the Weather?</title>
-</head>
-<body>
-    <div class="card">
-        <div class="search">
-            <input type="text" placeholder="enter city name" spellcheck="false">
-            <button><img src="./src/images/search.png"/></button>
-        </div>
-        <div class="error">
-            <p>City Not Found</p>
-        </div>
-        <div class="weather">
-            <img src="./src/images/rain.png" class="weather-icon">
-            <h1 class="temp">73°F</h1>
-            <h2 class="city">Denver</h1>
-            <div class="details">
-                <div class="col">
-                    <img src="./src/images/humidity.png">
-                    <div>
-                        <p class="humidity">50%</p>
-                        <p>Humidity</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1.2">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=1.2">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=1.2">
+        <link rel="manifest" href="/site.webmanifest?v=1.2">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=1.2" color="#00d8ff">
+        <link rel="shortcut icon" href="/favicon.ico?v=1.2">
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="theme-color" content="#00d8ff">
+        <script src="./weather.js" defer></script>
+        <title>What's the Weather?</title>
+    </head>
+    <body>
+        <div class="card">
+            <div class="search">
+                <input type="text" placeholder="enter city name" spellcheck="false">
+                <button><img src="./src/images/search.png"/></button>
+            </div>
+            <div class="error">
+                <p>City Not Found</p>
+            </div>
+            <div class="weather">
+                <img src="./src/images/rain.png" class="weather-icon">
+                <h1 class="temp">73°F</h1>
+                <h2 class="city">Denver</h1>
+                <div class="details">
+                    <div class="col">
+                        <img src="./src/images/humidity.png">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <img src="./src/images/wind.png">
-                    <div>
-                        <p class="wind">15 mph</p>
-                        <p>Wind Speed</p>
+                    <div class="col">
+                        <img src="./src/images/wind.png">
+                        <div>
+                            <p class="wind">15 mph</p>
+                            <p>Wind Speed</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <script type="module">
-
-
-
-        const apiKey = "d2359fb27eea3148a626bc7a884993a1";
-        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
-
-        const searchBox = document.querySelector(".search input");
-        const searchBtn = document.querySelector(".search button");
-        const weatherIcon = document.querySelector(".weather-icon");
-
-        async function CheckWeather(city){
-            const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-
-            if(response.status == 404){
-                document.querySelector(".error").style.display = "block";
-                document.querySelector(".weather").style.display = "none";
-            } else {
-                var data = await response.json();
-
-                console.log(data);
-
-                document.querySelector(".city").innerHTML = data.name;
-                document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°F";
-                document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-                document.querySelector(".wind").innerHTML = data.wind.speed + " mph";
-
-                switch(data.weather[0].main)
-                {
-                    case "Clouds":
-                        weatherIcon.src = "./src/images/clouds.png";
-                        break;
-                    case "Clear":
-                        weatherIcon.src = "./src/images/clear.png";
-                        break;
-                    case "Rain":
-                        weatherIcon.src = "./src/images/rain.png";
-                        break;
-                    case "Thunderstorm":
-                        weatherIcon.src = "./src/images/rain.png";
-                        break;
-                    case "Drizzle":
-                        weatherIcon.src = "./src/images/drizzle.png";
-                        break;
-                    case "Mist":
-                        weatherIcon.src = "./src/images/mist.png";
-                        break;
-                    case "Snow":
-                        weatherIcon.src = "./src/images/snow.png";
-                        break;
-                }
-
-                document.querySelector(".weather").style.display = "block";
-                document.querySelector(".error").style.display = "none";
-
-                searchBox.value = "";
-            }
-        }
-
-        searchBtn.addEventListener("click", () => {
-            CheckWeather(searchBox.value);
-        });
-
-        searchBox.addEventListener("keydown", () => {
-            if(event.keyCode == 13){
-                CheckWeather(searchBox.value);
-            }
-        })
-
-    </script>
-</body>
+    </body>
 </html>

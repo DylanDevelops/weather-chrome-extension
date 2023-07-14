@@ -2,9 +2,15 @@
     "manifest_version": 3,
     "name": "What's the Weather?",
     "description": "Check the weather on the fly from a chrome extension!",
-    "version": "1.0",
+    "version": "1.2",
+    "icons": {
+        "16": "./android-chrome-192x192.png",
+        "32": "./android-chrome-192x192.png",
+        "48": "./android-chrome-192x192.png",
+        "128": "./android-chrome-192x192.png"
+      },
     "action": {
         "default_popup": "index.html",
-        "default_icon": "src/images/clouds.png"
+        "default_icon": "./android-chrome-192x192.png"
     }
 }
