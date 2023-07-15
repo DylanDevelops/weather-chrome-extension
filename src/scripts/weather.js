@@ -3,7 +3,7 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
 
 document.addEventListener("DOMContentLoaded", async function() {
     const searchBox = document.querySelector(".search input");
-    const searchBtn = document.querySelector(".search button");
+    const searchBtn = document.querySelector(".search-link");
     const weatherIcon = document.querySelector(".weather-icon");
     const optionsLink = document.querySelector(".options-link");
     let measurementUnit;
