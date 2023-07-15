@@ -15,6 +15,17 @@
 
 body {
     background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+
+    /*
+    background: #222;
     position: fixed;
     top: 0;
     left: 0;
@@ -24,9 +35,19 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    */
 }
 
 .popup-container {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    /*
     width: 80%;
     height: 80%;
     display: flex;
@@ -34,9 +55,12 @@ body {
     align-items: flex-start;
     transform-origin: top left;
     transform: scale(0.8);
+    */
 }
 
 .gradient-border {
+    top: 3px;
+    bottom: 3px;
     padding: 1rem;
     position: relative;
     background: linear-gradient(135deg, #0f035b, #0f99b8);
@@ -54,6 +78,7 @@ body {
     padding: 40px 35px;
     text-align: center;
     min-width: 470px;
+    overflow: hidden;
 }
 
 .search {

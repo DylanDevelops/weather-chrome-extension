@@ -1,11 +1,14 @@
 const apiKey = "d2359fb27eea3148a626bc7a884993a1";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function() {
     const searchBox = document.querySelector(".search input");
     const searchBtn = document.querySelector(".search button");
     const weatherIcon = document.querySelector(".weather-icon");
     let measurementUnit;
+
+    //sets the focus on the search input element
+    searchBox.focus();
 
     async function CheckWeather(city) {
         if (searchBox.value != "") {
@@ -14,18 +17,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 { tempUnit: 'Imperial' },
                 (storedItems) => {
                     measurementUnit = storedItems.tempUnit;
+                    //console.log('Set measurement unit:' + measurementUnit);
                 }
             );
 
-            const response = await fetch(apiUrl + `units=${measurementUnit.toLowerCase()}` + `&q=${city}` + `&appid=${apiKey}`);
+            const response = await fetch(apiUrl + `units=${measurementUnit}` + `&q=${city}` + `&appid=${apiKey}`);
 
             if (response.status == 404) {
                 document.querySelector(".error").style.display = "block";
-                document.querySelector(".weather").style.display = "none";
+                document.querySelector(".weather").style.display = "none"; 
+                setTimeout(() => {
+                    document.querySelector(".error").style.display = "none";
+                }, 750);
             } else {
                 var data = await response.json();
 
-                console.log(data);
+                //console.log(data);
 
                 let tempDegreeUnit;
                 let windSpeedUnit;
@@ -80,13 +87,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    searchBtn.addEventListener("click", () => {
+    searchBtn.addEventListener("click", (event) => {
         CheckWeather(searchBox.value);
     });
 
-    searchBox.addEventListener("keydown", () => {
+    searchBox.addEventListener("keydown", (event) => {
         if (event.keyCode == 13) {
-        CheckWeather(searchBox.value);
+            CheckWeather(searchBox.value);
         }
     });
 });
