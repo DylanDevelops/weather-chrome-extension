@@ -98,7 +98,12 @@ body {
     border-radius: 30px;
     flex: 1;
     margin-right: 16px;
+    margin-left: 16px;
     font-size: 18px;
+}
+
+.search input:hover {
+    opacity: 80%;
 }
 
 .search button {
@@ -110,6 +115,10 @@ body {
     border-radius: 50%;
     cursor: pointer;
     flex: 0 0 60px;
+}
+
+.search button:hover {
+    opacity: 80%;
 }
 
 .search button img {

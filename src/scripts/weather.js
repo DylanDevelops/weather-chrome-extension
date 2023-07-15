@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     const searchBox = document.querySelector(".search input");
     const searchBtn = document.querySelector(".search button");
     const weatherIcon = document.querySelector(".weather-icon");
+    const optionsLink = document.querySelector(".options-link");
     let measurementUnit;
 
     //sets the focus on the search input element
@@ -94,5 +95,9 @@ document.addEventListener("DOMContentLoaded", async function() {
         if (event.keyCode == 13) {
             CheckWeather(searchBox.value);
         }
+    });
+
+    optionsLink.addEventListener("click", () => {
+        chrome.runtime.openOptionsPage();
     });
 });
