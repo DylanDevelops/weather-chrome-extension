@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="options-styles.css">
+    <title>Extension Options</title>
+  </head>
+  <body>
+    <h1>Options:</h1>
+
+    <label class="label-text">Display temperature in</label>
+    <div class="spacing"></div>
+    <input type="radio" class="radio-option" id="Imperial" name="degree-unit"/>
+    <label for="Imperial">Fahrenheit (&#176;F, mph, etc..)</label>
+
+    <br>
+
+    <input type="radio" class="radio-option" id="Metric" name="degree-unit" />
+    <label for="Metric">Celsius (&#176;C, kp/h, etc..)</label>
+
+    <br>
+
+    <button id="save">Save</button>
+    <div id="status"></div>
+
+    <script src="options.js"></script>
+  </body>
+</html>

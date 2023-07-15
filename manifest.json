@@ -10,6 +10,17 @@
         "48": "./android-chrome-192x192.png",
         "128": "./android-chrome-192x192.png"
       },
+    "permissions": [
+        "storage"
+    ],
+    "service_worker": {
+        "script": "background.js",
+        "persistent": false
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    },
     "action": {
         "default_popup": "index.html",
         "default_icon": "./android-chrome-192x192.png"

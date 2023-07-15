@@ -36,6 +36,14 @@ body {
     transform: scale(0.8);
 }
 
+.gradient-border {
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(135deg, #0f035b, #0f99b8);
+    padding: 10px;
+    border-radius: 20px;
+}
+
 .card {
     width: 90%;
     max-width: 470px;
@@ -45,6 +53,7 @@ body {
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+    min-width: 470px;
 }
 
 .search {
@@ -75,6 +84,7 @@ body {
     height: 60px;
     border-radius: 50%;
     cursor: pointer;
+    flex: 0 0 60px;
 }
 
 .search button img {
