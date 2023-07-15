@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1.2">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=1.2">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=1.2">
-        <link rel="manifest" href="/site.webmanifest?v=1.2">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=1.2" color="#00d8ff">
-        <link rel="shortcut icon" href="/favicon.ico?v=1.2">
+        <link rel="stylesheet" href="/src/styles/styles.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon-stuff/apple-touch-icon.png?v=1.2">
+        <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-stuff/favicon-32x32.png?v=1.2">
+        <link rel="icon" type="image/png" sizes="16x16" href="/src/favicon-stuff/favicon-16x16.png?v=1.2">
+        <link rel="manifest" href="/src/favicon-stuff/site.webmanifest?v=1.2">
+        <link rel="mask-icon" href="/src/favicon-stuff/safari-pinned-tab.svg?v=1.2" color="#00d8ff">
+        <link rel="shortcut icon" href="/src/favicon-stuff/favicon.ico?v=1.2">
         <meta name="msapplication-TileColor" content="#2d89ef">
         <meta name="theme-color" content="#00d8ff">
-        <script src="./weather.js" defer></script>
+        <script src="/src/scripts/weather.js" defer></script>
         <title>What's the Weather?</title>
     </head>
     <body>
@@ -21,25 +21,25 @@
                 <div class="card">
                     <div class="search">
                         <input type="text" placeholder="enter city name" id="city-input" spellcheck="false">
-                        <button><img src="./src/images/search.png"/></button>
+                        <button><img src="/src/images/search.png"/></button>
                     </div>
                     <div class="error">
                         <p>City Not Found</p>
                     </div>
                     <div class="weather">
-                        <img src="./src/images/rain.png" class="weather-icon">
+                        <img src="/src/images/weather/rain.png" class="weather-icon">
                         <h1 class="temp">73&#176;F</h1>
                         <h2 class="city">Denver</h1>
                         <div class="details">
                             <div class="col">
-                                <img src="./src/images/humidity.png">
+                                <img src="/src/images/humidity.png">
                                 <div>
                                     <p class="humidity">50%</p>
                                     <p>Humidity</p>
                                 </div>
                             </div>
                             <div class="col">
-                                <img src="./src/images/wind.png">
+                                <img src="/src/images/wind.png">
                                 <div>
                                     <p class="wind">15 mph</p>
                                     <p>Wind Speed</p>

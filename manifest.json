@@ -5,24 +5,24 @@
     "author": "Dylan Ravel",
     "version": "1.4",
     "icons": {
-        "16": "./android-chrome-192x192.png",
-        "32": "./android-chrome-192x192.png",
-        "48": "./android-chrome-192x192.png",
-        "128": "./android-chrome-192x192.png"
+        "16": "/src/favicon-stuff/android-chrome-192x192.png",
+        "32": "/src/favicon-stuff/android-chrome-192x192.png",
+        "48": "/src/favicon-stuff/android-chrome-192x192.png",
+        "128": "/src/favicon-stuff/android-chrome-192x192.png"
       },
     "permissions": [
         "storage"
     ],
     "background": {
-        "service_worker": "./background.js",
+        "service_worker": "/src/scripts/background.js",
         "type": "module"
     },
     "options_ui": {
-        "page": "options.html",
+        "page": "/src/ui/options.html",
         "open_in_tab": false
     },
     "action": {
-        "default_popup": "index.html",
-        "default_icon": "./android-chrome-192x192.png"
+        "default_popup": "/src/ui/index.html",
+        "default_icon": "/src/favicon-stuff/android-chrome-192x192.png"
     }
 }
