@@ -128,5 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
 weather-chrome-extension.crx
 *.pem
+Release Stuff/
+
+*.DS_Store
