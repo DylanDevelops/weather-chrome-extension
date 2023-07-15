@@ -1,4 +1,4 @@
-# Where's the weather?
+# What's the weather?
 A simple chrome extension that shows you the weather.
 
 # Download
