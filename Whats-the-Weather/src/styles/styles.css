@@ -66,8 +66,7 @@ body {
     position: relative;
     background: linear-gradient(135deg, #0f035b, #0f99b8);
     padding: 10px;
-    border-radius: 20px;
-}
+    border-radius: 5px;
 
 .card {
     width: 90%;
