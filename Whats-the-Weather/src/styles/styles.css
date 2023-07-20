@@ -60,13 +60,12 @@ body {
 }
 
 .gradient-border {
-    top: 3px;
-    bottom: 3px;
     padding: 1rem;
     position: relative;
     background: linear-gradient(135deg, #0f035b, #0f99b8);
     padding: 10px;
     border-radius: 5px;
+}
 
 .card {
     width: 90%;
