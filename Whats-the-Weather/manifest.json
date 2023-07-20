@@ -3,7 +3,7 @@
     "name": "What's the Weather?",
     "description": "Check the weather on the fly from a chrome extension!",
     "author": "Dylan Ravel",
-    "version": "1.5",
+    "version": "1.5.1.0",
     "icons": {
         "16": "/src/favicon-stuff/android-chrome-192x192.png",
         "32": "/src/favicon-stuff/android-chrome-192x192.png",
