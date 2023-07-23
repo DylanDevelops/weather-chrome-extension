@@ -1,3 +1,8 @@
+:root {
+    --text-color: #fff;
+    --background-color: #222;
+}
+
 * {
     margin: 8px;
     padding: 0;
@@ -6,8 +11,8 @@
 }
 
 body {
-    background: #222;
-    color: white;
+    background: var(--background-color);
+    color: var(--text-color);
     overflow: hidden;
 }
 
@@ -17,7 +22,6 @@ h1 {
 
 .label-text {
     font-size: 18px;
-    color: #ffffff;
     margin-bottom: 5px;
 }
 

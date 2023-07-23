@@ -1,3 +1,25 @@
+// sets background color of settings depending on if you are using light or dark mode
+function updateColorScheme(e) {
+    const isDarkMode = e.matches;
+    const root = document.documentElement;
+    if (isDarkMode) {
+        // is dark mode
+        root.style.setProperty('--text-color', '#fff');
+        root.style.setProperty('--background-color', '#222');
+    } else {
+        // is not dark mode
+        root.style.setProperty('--text-color', '#222');
+        root.style.setProperty('--background-color', '#fff');
+    }
+}
+
+// Check the user's preferred color scheme on load
+const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+updateColorScheme({ matches: isDarkMode });
+
+// Watch for changes in the user's preferred color scheme and update styles accordingly
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateColorScheme);
+
 // saves options to chrome storage
 const saveOptions = () => {
     var possibleDegreeOptions = document.getElementsByName('degree-unit');
